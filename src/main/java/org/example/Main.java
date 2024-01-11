@@ -1,5 +1,16 @@
-package org.example;public class Main {
+package org.example;
+
+
+import java.util.List;
+
+
+public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        String filePath = "src/main/resources/Задача ВС Java Сбер.csv";
+
+        List<City> cities = CityParser.parseCitiesFromFile(filePath);
+
+        CitySorter.findCityWithMaxPopulation(cities);
     }
 }
